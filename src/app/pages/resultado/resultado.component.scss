@@ -1,0 +1,17 @@
+
+.bod {
+    margin: 0;
+    background-image: url("../../../assets/ImagensSorteio/fundo.png");
+    background-position: center;
+    height: 95vh;
+    width: 99vw;
+}
+p {
+    margin: 0;
+    font-size: 70px;
+    color: white;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

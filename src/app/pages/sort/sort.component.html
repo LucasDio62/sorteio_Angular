@@ -1,0 +1,13 @@
+<div class="body">
+    <div class="corpo_S">
+        <input autofocus [ngStyle]="{'margin-bottom': pBoolean ? '12.8%' : '0'}" id="nome" class="inputP" (keyup.enter)="addNome(); verificaTamanhoArray()" name="nome" [(ngModel)]="nome" type="text" placeholder="Insira o nome aqui ...">
+        <p class="p" [ngStyle]="{'display': pBoolean ? 'none' : 'block'}">Este nome já foi inserido. Selecione outro nome</p>
+        <div  class="lista">
+            <ul *ngFor="let nomes of nomesSorteio; let i = index">
+                <li>{{i+1}}.  {{nomes}} <button (click)="remove(i)">remove</button></li>
+            </ul>
+        </div>
+        <button [disabled]="disable" routerLink="/resultado" id="sortear" (click)="sortear()">CRIAR SORTEIO</button>
+        <p [ngStyle]="{'display': disable ? 'block' : 'none'}" class="secondP">Insira pelo menos 2 nomes para criar o sorteio!</p>
+    </div>
+</div>
